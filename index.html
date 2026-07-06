@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knight & Guardian - An Epic 2D Platformer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">Knight<span>&</span>Guardian</div>
+        <!-- Mobile Menu Toggle -->
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <nav class="nav-links" id="navLinks">
+            <a href="#hero">Home</a>
+            <a href="#story">Story</a>
+            <a href="#worlds">Worlds</a>
+            <a href="#artifacts">Artifacts</a>
+            <a href="#play" class="btn-nav">Play Now</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1>A Sword for Honor.<br>A Gun for Magic.</h1>
+            <p>Embrace the power of the Ancient Guardian and save the realm from the Dark Lord.</p>
+            <a href="#play" class="btn-primary">Download Demo</a>
+        </div>
+        <!-- REPLACE WITH YOUR HERO IMAGE/GIF -->
+        <div class="hero-image">
+            <img src="https://i.postimg.cc/kgSwHxdb/Snimok-ekrana-2025-07-15-170655.png" alt="Young Knight wielding sword and magical gun">
+        </div>
+    </section>
+
+    <!-- Story & Features Section -->
+    <section id="story" class="story-section">
+        <div class="container">
+            <h2>The Guardian's Chosen</h2>
+            <p class="subtitle">An action-packed 2D platformer blending classic melee combat with magical ranged abilities.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚔️</div>
+                    <h3>Dual Wield Combat</h3>
+                    <p>Master the synergy between swift sword strikes and high-impact magical gun blasts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👾</div>
+                    <h3>Fierce Monsters</h3>
+                    <p>Battle through hordes of unique enemies, each requiring different tactics to defeat.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👑</div>
+                    <h3>The Dark Lord</h3>
+                    <p>Face the ultimate evil in a multi-stage boss fight that will test all your skills.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Worlds Showcase Section -->
+    <section id="worlds" class="worlds-section">
+        <div class="container">
+            <h2>Four Worlds to Explore</h2>
+            <div class="worlds-slider">
+                <!-- Tabs to switch worlds -->
+                <div class="world-tabs">
+                    <button class="tab-btn active" data-world="world1">Forest of Whispers</button>
+                    <button class="tab-btn" data-world="world2">Sunken Ruins</button>
+                    <button class="tab-btn" data-world="world3">Volcanic Peaks</button>
+                    <button class="tab-btn" data-world="world4">Dark Lord's Citadel</button>
+                </div>
+                <!-- Dynamic World Content -->
+                <div class="world-content-wrapper">
+                    <!-- World 1 -->
+                    <div class="world-content active" id="world1">
+                        <img src="https://i.postimg.cc/4N9z4s28/Snimok-ekrana-2026-02-16-184816.png" alt="Forest of Whispers screenshot">
+                        <div class="world-text">
+                            <h3>The Forest of Whispers</h3>
+                            <p>Where your journey begins. Navigate lush, vibrant environments filled with hidden paths and dangerous woodland beasts.</p>
+                        </div>
+                    </div>
+                    <!-- World 2 -->
+                    <div class="world-content" id="world2">
+                        <img src="https://i.postimg.cc/kgSwHxdb/Snimok-ekrana-2025-07-15-170655.png" alt="Sunken Ruins screenshot">
+                        <div class="world-text">
+                            <h3>The Sunken Ruins</h3>
+                            <p>Submerged temples requiring precise platforming and underwater navigation. Watch out for ancient traps!</p>
+                        </div>
+                    </div>
+                    <!-- World 3 -->
+                    <div class="world-content" id="world3">
+                        <img src="https://i.postimg.cc/Rhnn0LdQ/Snimok-ekrana-2026-02-16-185157.png" alt="Volcanic Peaks screenshot">
+                        <div class="world-text">
+                            <h3>The Volcanic Peaks</h3>
+                            <p>Leap across rivers of lava and utilize your magical gun to trigger environmental puzzles in this scorching wasteland.</p>
+                        </div>
+                    </div>
+                    <!-- World 4 -->
+                    <div class="world-content" id="world4">
+                        <img src="https://i.postimg.cc/6phzwBTH/Snimok-ekrana-2025-07-29-175919.png" alt="Dark Lord's Citadel screenshot">
+                        <div class="world-text">
+                            <h3>The Dark Lord's Citadel</h3>
+                            <p>The final bastion of evil. Fight the toughest minions before facing the Dark Lord himself.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artifacts Gallery Section -->
+    <section id="artifacts" class="artifacts-section">
+        <div class="container">
+            <h2>Collect Powerful Artifacts</h2>
+            <p class="subtitle">Discover ancient relics hidden across the worlds to upgrade your stats and unlock new magical elements.</p>
+            <div class="gallery-grid">
+                <!-- REPLACE img src WITH YOUR RELIC ART -->
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/PJZz7jgs/Snimok-ekrana-2025-12-28-102948.png" alt="Guardian's Eye Artifact">
+                    <div class="gallery-overlay">
+                        <h4>Guardian's Eye</h4>
+                        <p>Reveals hidden pathways and invisible enemies.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/yxFcPTZt/Snimok-ekrana-2025-08-05-153301.png" alt="Phoenix Core Artifact">
+                    <div class="gallery-overlay">
+                        <h4>Phoenix Core</h4>
+                        <p>Infuses your magical gun bullets with fire damage.</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.postimg.cc/4dc9f1Bc/Snimok-ekrana-2025-07-30-140904.png" alt="Chrono Pendant Artifact">
+                    <div class="gallery-overlay">
+                        <h4>Chrono Pendant</h4>
+                        <p>Briefly slows down time to escape tight platforming traps.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section id="play" class="cta-section">
+        <div class="cta-container">
+            <h2>Ready to Take Up the Sword?</h2>
+            <p>Join the adventure today. Available for PC and Console.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Download on Steam</a>
+                <a href="#" class="btn-secondary">Wishlist Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Your Studio Name. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
