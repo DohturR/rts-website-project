@@ -1,0 +1,458 @@
+/* ==========================================================================
+   1. Design Tokens & Reset
+   ========================================================================== */
+:root {
+    --bg-dark: #0b0c10;
+    --bg-light: #1f2833;
+    --accent-cyan: #66fcf1;
+    --accent-blue: #45f3ff;
+    --text-main: #c5a059; /* Gold accent text */
+    --text-white: #ffffff;
+    --text-gray: #a9b7c6;
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --transition-smooth: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-cyan);
+}
+
+.subtitle {
+    text-align: center;
+    color: var(--text-gray);
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   2. Reusable Components (Buttons)
+   ========================================================================== */
+.btn-primary, .btn-secondary, .btn-nav {
+    display: inline-block;
+    padding: 12px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary {
+    background-color: var(--accent-cyan);
+    color: var(--bg-dark);
+}
+
+.btn-primary:hover {
+    background-color: var(--text-white);
+    box-shadow: 0 0 15px var(--accent-cyan);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--text-white);
+    border: 2px solid var(--text-white);
+}
+
+.btn-secondary:hover {
+    background-color: var(--text-white);
+    color: var(--bg-dark);
+}
+
+/* ==========================================================================
+   3. Navigation Bar
+   ========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: rgba(11, 12, 16, 0.95);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(102, 252, 241, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: var(--text-white);
+}
+
+.logo span {
+    color: var(--accent-cyan);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: var(--text-gray);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.nav-links a:hover {
+    color: var(--accent-cyan);
+}
+
+.btn-nav {
+    padding: 8px 20px;
+    border: 1px solid var(--accent-cyan);
+    color: var(--accent-cyan) !important;
+}
+
+.btn-nav:hover {
+    background-color: var(--accent-cyan);
+    color: var(--bg-dark) !important;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   4. Hero Section
+   ========================================================================== */
+.hero-section {
+    padding: 160px 5% 80px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    gap: 40px;
+    background: linear-gradient(135deg, #0b0c10 0%, #15202b 100%);
+}
+
+.hero-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: var(--text-white);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--text-gray);
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(102, 252, 241, 0.2);
+}
+
+/* ==========================================================================
+   5. Story & Features Section
+   ========================================================================== */
+.story-section {
+    background-color: var(--bg-light);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.feature-card {
+    background-color: var(--bg-dark);
+    padding: 40px 30px;
+    border-radius: 6px;
+    text-align: center;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent-cyan);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--text-white);
+}
+
+.feature-card p {
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. Worlds Slider Section
+   ========================================================================== */
+.worlds-section {
+    background-color: var(--bg-dark);
+}
+
+.world-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    background-color: var(--bg-light);
+    color: var(--text-gray);
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--transition-smooth);
+}
+
+.tab-btn.active, .tab-btn:hover {
+    background-color: var(--accent-cyan);
+    color: var(--bg-dark);
+    font-weight: bold;
+}
+
+.world-content {
+    display: none;
+    align-items: center;
+    gap: 40px;
+    animation: fadeIn 0.5s ease;
+}
+
+.world-content.active {
+    display: flex;
+}
+
+.world-content img {
+    flex: 1;
+    width: 50%;
+    border-radius: 6px;
+    object-fit: cover;
+    max-height: 350px;
+}
+
+.world-text {
+    flex: 1;
+}
+
+.world-text h3 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: var(--accent-cyan);
+}
+
+.world-text p {
+    color: var(--text-gray);
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   7. Artifacts Gallery Section
+   ========================================================================== */
+.artifacts-section {
+    background-color: var(--bg-light);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 6px;
+    aspect-ratio: 4 / 3;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 12, 16, 0.9);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+.gallery-overlay h4 {
+    color: var(--accent-cyan);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.gallery-overlay p {
+    color: var(--text-white);
+    font-size: 1rem;
+}
+
+/* ==========================================================================
+   8. Call To Action & Footer
+   ========================================================================== */
+.cta-section {
+    background: linear-gradient(rgba(11, 12, 16, 0.85), rgba(11, 12, 16, 0.85)), url('placeholder-cta.jpg') no-repeat center/cover;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.cta-container h2 {
+    margin-bottom: 20px;
+}
+
+.cta-container p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: var(--text-gray);
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+footer {
+    background-color: #050608;
+    text-align: center;
+    padding: 30px 20px;
+    color: var(--text-gray);
+    font-size: 0.9rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ==========================================================================
+   9. Animations & Responsive Breakpoints
+   ========================================================================== */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Tablet and Smartphone Layouts */
+@media (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 120px;
+    }
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+    .world-content {
+        flex-direction: column;
+    }
+    .world-content img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--bg-dark);
+        padding: 20px;
+        box-shadow: 0 10px 15px rgba(0,0,0,0.5);
+        border-bottom: 1px solid rgba(102, 252, 241, 0.1);
+    }
+    .nav-links.mobile-open {
+        display: flex;
+    }
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
